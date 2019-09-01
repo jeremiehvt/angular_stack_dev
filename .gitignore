@@ -1,0 +1,6 @@
+project/
+.npm
+.config
+.project
+package-lock.json
+.bash_history

@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+    webapp:
+        env_file: .env
+        build:
+            context: .
+            args:
+                - ADMIN_USER
+                - ADMIN_EMAIL
+        image: angular:1
+        ports:
+            - "${WEB_APP_HOST_PORT}:4200"
+        volumes:
+            - "${WEB_APP_PATH}:/home/jeremiehvt/project/"
